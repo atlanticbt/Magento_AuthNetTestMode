@@ -1,0 +1,16 @@
+<?php if ($this->storeInTestMode()) : ?>
+    <div class="divider"></div>
+    <div class="demo-notice">
+        <div class="notice-inner">
+            This Authorize.net gateway is in TEST mode, this order will not be fulfilled
+        </div>
+        <div class="notice-inner">
+            If you think there has been an error, please contact us at
+            <?php if (Mage::getStoreConfig('general/store_information/phone')) : ?>
+                (<?php echo Mage::getStoreConfig('general/store_information/phone'); ?>) or
+            <?php endif; ?>
+            (<a href="mailto:<?php echo Mage::getStoreConfig('trans_email/ident_support/email');?>"><?php echo Mage::getStoreConfig('trans_email/ident_support/email'); ?></a>)
+        </div>
+    </div>
+    <div class="divider"></div>
+<?php endif; ?>
