@@ -3,7 +3,7 @@
     <modules>
         <AtlanticBT_AuthNetTestMode>
             <active>true</active>
-            <codePool>local</codePool>
+            <codePool>community</codePool>
         </AtlanticBT_AuthNetTestMode>
     </modules>
 </config>

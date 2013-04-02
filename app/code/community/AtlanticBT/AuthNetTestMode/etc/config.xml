@@ -1,0 +1,57 @@
+<config>
+    <modules>
+        <AtlanticBT_AuthNetTestMode>
+        	<version>0.1.0</version>
+        </AtlanticBT_AuthNetTestMode>
+    </modules>
+    <global>
+        <blocks>
+            <atlanticbt_authnettestmode>
+                <class>AtlanticBT_AuthNetTestMode_Block</class>
+            </atlanticbt_authnettestmode>
+        </blocks>
+        <models>
+            <atlanticbt_authnettestmode>
+                <class>AtlanticBT_AuthNetTestMode_Model</class>
+            </atlanticbt_authnettestmode>
+        </models>
+    </global>
+
+    <frontend>
+        <routers>
+            <AtlanticBT_AuthNetTestMode>
+                <use>standard</use>
+                <args>
+                    <module>AtlanticBT_AuthNetTestMode</module>
+                    <frontName>atlanticbt_authnettestmode</frontName>
+                </args>
+            </AtlanticBT_AuthNetTestMode>
+        </routers>
+        <layout>
+            <updates>
+                <atlanticbt_authnettestmode module="AtlanticBT_AuthNetTestMode">
+                    <file>atlanticbt/authnettestmode.xml</file>
+                </atlanticbt_authnettestmode>
+            </updates>
+        </layout>
+
+        <events>
+            <core_layout_block_create_after>
+                <observers>
+                    <atlanticbt_authnettestmode>
+                        <class>atlanticbt_authnettestmode/observer</class>
+                        <method>checkBlock</method>
+                    </atlanticbt_authnettestmode>
+                </observers>
+            </core_layout_block_create_after>
+        </events>
+    </frontend>
+
+    <phpunit>
+        <suite>
+            <modules>
+                <AtlanticBT_AuthNetTestMode />
+            </modules>
+        </suite>
+    </phpunit>
+</config>
