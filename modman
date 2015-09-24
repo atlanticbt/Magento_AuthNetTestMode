@@ -1,3 +1,3 @@
 app/etc/modules/AtlanticBT_AuthNetTestMode.xml  app/etc/modules/
 app/code/community/AtlanticBT                   app/code/community/AtlanticBT/
-app/design/frontend/default/default/template    app/design/frontend/default/default/template/
+app/design/frontend/base/default/template       app/design/frontend/base/default/template/
